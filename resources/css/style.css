@@ -172,6 +172,10 @@ article p {
   border-bottom: 1px solid rgba(50, 50, 50, 0.2);
 }
 
+.link:hover {
+  background-color: rgba(50, 50, 50, 0.1);
+}
+
 .link-info {
   max-width: 65%;
 }
@@ -196,6 +200,116 @@ article p {
   color: rgb(0, 148, 255);
 }
 
-.grey {
-  background-color: rgba(50, 50, 50, 0.2);
+/* COURSES */
+
+.courses {
+  display: flex;
+  align-items: center;
+  flex-flow: column nowrap;
+  justify-content: center;
+  background-color: rgba(50, 50, 50, 0.1);
+}
+
+.courses h1 {
+  font-size: 2rem;
+  margin: 2rem auto 0;
+}
+
+.grid {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 2rem auto;
+}
+
+.course {
+  display: flex;
+  flex-direction: column;
+  max-width: 27%;
+  margin: 1rem;
+  background-color: rgb(255, 255, 255);
+}
+
+.course img {
+  max-width: 100%;
+  height: auto;
+}
+
+.course-info {
+  padding: 1rem;
+}
+
+.course-info li {
+  line-height: 1.4;
+  padding: 0.5rem;
+}
+
+.course-info li:first-child {
+  font-size: 1.2rem;
+}
+
+/* EXHIBIT */
+
+.exhibit {
+  display: flex;
+  flex-direction: column;
+}
+
+.exhibit h1 {
+  font-size: 2rem;
+  margin: 2rem auto 0.5rem;
+}
+
+.exh-content {
+  display: flex;
+}
+
+/* video */
+
+.video {
+  max-width: 60%;
+  padding: 1.5rem;
+}
+
+.video video {
+  width: 100%;
+  height: auto;
+  padding-bottom: 1.5rem;
+}
+
+.exh-info li:first-child {
+  font-size: 2rem;
+  padding-bottom: 0.5rem;
+}
+
+.exh-info li:last-child {
+  line-height: 1.4;
+  padding-bottom: 0.5rem;
+}
+
+.exh-links {
+  max-width: 40%;
+  padding-top: 1.5rem;
+}
+
+/* FOOTER */
+
+footer {
+  display: flex;
+  border-top: 1px solid rgba(50, 50, 50, 0.1);
+  height: 5rem;
+}
+
+footer p {
+  font-size: 0.75rem;
+  padding: 1rem 1.5rem;
+}
+
+footer p:first-child {
+  margin-right: auto;
+}
+
+footer a {
+  text-decoration: none;
+  color: inherit;
 }
