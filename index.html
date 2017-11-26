@@ -36,16 +36,22 @@
     <!-- HEADER -->
 
     <header class="container">
-      <ul>
+      <ul class="desktop">
         <li><img src="resources\media\images\ic-logo.svg" alt="Colmar Academy Logo"></li>
         <li class="dark bold">COLMAR</li>
         <li class="light">ACADEMY</li>
       </ul>
-      <nav class="light bold">
+      <nav class="light bold desktop">
         <span><a href="#">On campus</a></span>
         <span><a href="#">Online</a></span>
         <span><a href="#">For companies</a></span>
         <span><a href="#">Sign in</a></span>
+      </nav>
+      <nav class="mobile">
+        <span><img src="resources\media\images\ic-logo.svg" alt="Colmar Academy Logo"></span>
+        <span><a href="#"><img src="resources\media\images\ic-on-campus.svg" alt="On campus"></a></span>
+        <span><a href="#"><img src="resources\media\images\ic-online.svg" alt="Online"></a></span>
+        <span><a href="#"><img src="resources\media\images\ic-login.svg" alt="Sign in"></a></span>
       </nav>
     </header>
 
@@ -68,19 +74,20 @@
       <!-- INFO -->
 
       <section class="info">
-        <article>
+        <div class="desktop">
           <img src="resources\media\images\information-main.jpg" alt="Man reading a book in the park.">
           <h1 class="dark bold">It doesn't hurt to keep practicing</h1>
           <p class="dark">"Curabitur vitae libero in ipsum porttitor consequat. Aliquam et comodo lectus, nec consequat neque. Sed mpm accumsan urna. Phasellus sed consequat ex. Etiam magna laoreet, efficitur dor consequat, tristique ligula."</p>
           <p class="dark bold quote">Emanuel, Sr Strategist at Hiring.com</p>
-        </article>
+        </div>
 
         <!-- links -->
 
         <div class="links">
 
           <div class="link">
-            <img src="resources\media\images\information-orientation.jpg" alt="Top-down view of people in the park with long casting shadows.">
+            <img class="desktop" src="resources\media\images\information-orientation.jpg" alt="Top-down view of people in the park with long casting shadows.">
+            <img class="mobile" src="resources\media\images\information-orientation-mobile.jpg" alt="Top-down view of people in the park with long casting shadows.">
             <ul class="link-info">
               <li class="dark bold">Orientation date</li>
               <li class="dark">Tue 10/11 & Wed 10/12: 8am-3pm</li>
@@ -89,7 +96,8 @@
           </div>
 
           <div class="link">
-            <img src="resources\media\images\information-campus.jpg" alt="Cozy coffe shop with a map of South America on the wall.">
+            <img class="desktop" src="resources\media\images\information-campus.jpg" alt="Cozy coffe shop with a map of South America on the wall.">
+            <img class="mobile" src="resources\media\images\information-campus-mobile.jpg" alt="Cozy coffe shop with a map of South America on the wall.">
             <ul class="link-info">
               <li class="dark bold">Our campus</li>
               <li class="dark">Find which campus is close by you</li>
@@ -98,8 +106,9 @@
           </div>
 
           <div class="link">
-            <img src="resources\media\images\information-guest-lecture.jpg" alt="Close-up portrait of Oliver Sack.">
-            <ul class="link-info">
+            <img class="desktop" src="resources\media\images\information-guest-lecture.jpg" alt="Close-up portrait of Oliver Sack.">
+            <img class="mobile" src="resources\media\images\information-guest-lecture-mobile.jpg" alt="Close-up portrait of Oliver Sack.">
+            <ul class="link-info special">
               <li class="dark bold">Our guest lecture</li>
               <li class="dark">Join a keynote with Oliver Sack about music in medical treatment</li>
               <li><a href="#">Read more</a></li>
@@ -110,79 +119,115 @@
       </section>
 
       <!-- COURSES -->
+      <div class="desktop">
+        <section class="courses">
+          <h1 class="dark bold">Start learning</h1>
 
-      <section class="courses">
-        <h1 class="dark bold">Start learning</h1>
+          <div class="grid">
+            <div class="course">
+              <img src="resources\media\images\course-software.jpg" alt="Closeup on two monitor screens in a dark room.">
+              <ul class="course-info">
+                <li class="dark bold">Software engineering</li>
+                <li class="light">COURSES</li>
+                <li class="light">Web Development, Mobile Development, iOT, APIs</li>
+              </ul>
+            </div>
 
-        <div class="grid">
-          <div class="course">
-            <img src="resources\media\images\course-software.jpg" alt="Closeup on two monitor screens in a dark room.">
-            <ul class="course-info">
-              <li class="dark bold">Software engineering</li>
-              <li class="light">COURSES</li>
-              <li class="light">Web Development, Mobile Development, iOT, APIs</li>
-            </ul>
+            <div class="course">
+              <img src="resources\media\images\course-computer-art.jpg" alt="First-person view of a phone held in a hand.">
+              <ul class="course-info">
+                <li class="dark bold">Computer art</li>
+                <li class="light">COURSES</li>
+                <li class="light">Imaging & Design, Web Design, Motion Graphics & Visual Effects, Computer Animation</li>
+              </ul>
+            </div>
+
+            <div class="course">
+              <img src="resources\media\images\course-design.jpg" alt="Closeup on a photographer holding a vintage camera.">
+              <ul class="course-info">
+                <li class="dark bold">Design</li>
+                <li class="light">COURSES</li>
+                <li class="light">User Experience Design, User Research, Visual Design</li>
+              </ul>
+            </div>
+
+            <div class="course">
+              <img src="resources\media\images\course-data.jpg" alt="Closeup on a laptop screen full of charts, graphs and numbers.">
+              <ul class="course-info">
+                <li class="dark bold">Data</li>
+                <li class="light">COURSES</li>
+                <li class="light">Data Science, Big Data, SQL, Data Visualization</li>
+              </ul>
+            </div>
+
+            <div class="course">
+              <img src="resources\media\images\course-business.jpg" alt="Closeup on wooden chess figures in front of a leather couch.">
+              <ul class="course-info">
+                <li class="dark bold">Business</li>
+                <li class="light">COURSES</li>
+                <li class="light">Product Development, Business Development, Startup</li>
+              </ul>
+            </div>
+
+            <div class="course">
+              <img src="resources\media\images\course-marketing.jpg" alt="Closeup on a person checking on a smart-watch.">
+              <ul class="course-info">
+                <li class="dark bold">Marketing</li>
+                <li class="light">COURSES</li>
+                <li class="light">Analytics, Content Marketing, Mobile Marketing</li>
+              </ul>
+            </div>
           </div>
 
-          <div class="course">
-            <img src="resources\media\images\course-computer-art.jpg" alt="First-person view of a phone held in a hand.">
-            <ul class="course-info">
-              <li class="dark bold">Computer art</li>
-              <li class="light">COURSES</li>
-              <li class="light">Imaging & Design, Web Design, Motion Graphics & Visual Effects, Computer Animation</li>
-            </ul>
-          </div>
+        </section>
+      </div>
 
-          <div class="course">
-            <img src="resources\media\images\course-design.jpg" alt="Closeup on a photographer holding a vintage camera.">
-            <ul class="course-info">
-              <li class="dark bold">Design</li>
-              <li class="light">COURSES</li>
-              <li class="light">User Experience Design, User Research, Visual Design</li>
-            </ul>
-          </div>
+      <div class="mobile">
 
-          <div class="course">
-            <img src="resources\media\images\course-data.jpg" alt="Closeup on a laptop screen full of charts, graphs and numbers.">
-            <ul class="course-info">
-              <li class="dark bold">Data</li>
-              <li class="light">COURSES</li>
-              <li class="light">Data Science, Big Data, SQL, Data Visualization</li>
-            </ul>
-          </div>
+        <div class="courses">
 
-          <div class="course">
-            <img src="resources\media\images\course-business.jpg" alt="Closeup on wooden chess figures in front of a leather couch.">
-            <ul class="course-info">
-              <li class="dark bold">Business</li>
-              <li class="light">COURSES</li>
-              <li class="light">Product Development, Business Development, Startup</li>
-            </ul>
-          </div>
+          <h1 class="dark bold">Start learning</h1>
 
-          <div class="course">
-            <img src="resources\media\images\course-marketing.jpg" alt="Closeup on a person checking on a smart-watch.">
-            <ul class="course-info">
-              <li class="dark bold">Marketing</li>
-              <li class="light">COURSES</li>
-              <li class="light">Analytics, Content Marketing, Mobile Marketing</li>
-            </ul>
+          <div class="grid">
+
+            <div class="course">
+              <p class="dark bold">Software engineering</p>
+            </div>
+
+            <div class="course">
+              <p class="dark bold">Computer art</p>
+            </div>
+
+            <div class="course">
+              <p class="dark bold">Design</p>
+            </div>
+
+            <div class="course">
+              <p class="dark bold">Data</p>
+            </div>
+
+            <div class="course">
+              <p class="dark bold">Business</p>
+            </div>
+
+            <div class="course">
+              <p class="dark bold">Marketing</p>
+            </div>
+
           </div>
         </div>
-
-      </section>
-
+      </div>
       <!-- EXHIBIT -->
 
       <section class="exhibit">
-        <h1 class="dark bold">Thesis exhibit</h1>
+        <h1 class="dark bold">Thesis exhibits</h1>
         <div class="exh-content">
 
           <!-- video -->
 
           <div class="video">
             <video src="resources\media\videos\thesis.mp4" controls>Sorry, your browser doesn't support embedded videos, but don't worry, you can <a href="resources\media\videos\thesis.mp4">download it</a> and watch it with your favorite video player!</video>
-            <ul class="exh-info">
+            <ul class="exh-info desktop">
               <li class="dark bold">Reimagine urban</li>
               <li class="dark">"Curabitur vitae libero in ipsum porttitor consequat. Aliquam et comodo lectus, nec consequat neque. Sed mpm accumsan urna. Phasellus sed consequat ex. Etiam magna laoreet, efficitur dor consequat, tristique ligula."</li>
             </ul>
@@ -190,10 +235,10 @@
 
           <!-- exhibit links -->
 
-          <div class="exh-links">
+          <div class="exh-links desktop">
 
             <div class="link">
-              <img src="resources\media\images\thesis-fisma.jpg" alt="Top-down view of hand drawing diagrams on paper.">
+              <img class="desktop" src="resources\media\images\thesis-fisma.jpg" alt="Top-down view of hand drawing diagrams on paper.">
               <ul class="link-info">
                 <li class="dark bold">Fisma: Design and Prototype</li>
                 <li class="dark">Designer showcase of new prototype product</li>
@@ -201,7 +246,7 @@
             </div>
 
             <div class="link">
-              <img src="resources\media\images\thesis-now-and-then.jpg" alt="Old picture of The Empire State Building in New York.">
+              <img class="desktop" src="resources\media\images\thesis-now-and-then.jpg" alt="Old picture of The Empire State Building in New York.">
               <ul class="link-info">
                 <li class="dark bold">Now and then</li>
                 <li class="dark">Research study about New York</li>
@@ -213,15 +258,14 @@
         </div>
       </section>
 
-      <!-- FOOTER -->
-
-      <footer>
-        <p class="dark">&copy; 2016 Colmar Academy. All rights reserved</p>
-        <p class="dark bold"><a href="#">Terms</a></p>
-        <p class="dark bold"><a href="#">Privacy</a></p>
-      </footer>
-
     </main>
+    <!-- FOOTER -->
+
+    <footer class="container">
+      <p class="dark">&copy; 2016 Colmar Academy. All rights reserved</p>
+      <p class="dark bold desktop"><a href="#">Terms</a></p>
+      <p class="dark bold desktop"><a href="#">Privacy</a></p>
+    </footer>
 
 
   </body>

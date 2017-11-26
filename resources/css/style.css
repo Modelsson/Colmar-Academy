@@ -30,6 +30,24 @@ body {
   padding: 0;
 }
 
+/* hide content for mobile */
+
+@media only screen and (max-width: 480px) {
+  .desktop {
+    display: none;
+  }
+}
+
+/* hide content for desktop */
+
+@media only screen and (min-width: 481px) {
+  .mobile {
+    display: none;
+  }
+}
+
+/* text formating */
+
 .dark {
   color: rgba(50, 50, 50, 0.9);
 }
@@ -63,7 +81,7 @@ header ul {
   align-items: center;
   height: 2rem;
   margin-right: auto;
-  padding-left: 1.5rem;
+  margin-left: 1.5rem;
 }
 
 nav span {
@@ -82,14 +100,29 @@ nav span:last-child {
 }
 
 nav span:hover {
-  color: rgba(50, 50, 50, 0.8);
+  color: rgba(50, 50, 50, 0.9);
   border-radius: 2rem;
-  background-color: rgba(0, 0, 0, 0.08);
-  box-shadow: 0 0 1rem 0.2rem rgba(0, 0, 0, 0.1);
 }
 
 nav span:active {
   color: rgba(50, 50, 50, 0.4);
+}
+
+@media only screen and (max-width: 480px) {
+  header .mobile {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: space-around;
+  }
+
+  nav span:last-child {
+    margin-right: 0;
+  }
+
+  nav span img {
+    height: 2rem;
+  }
 }
 
 /* MAIN */
@@ -110,24 +143,35 @@ nav span:active {
 .banner img {
   max-width: 60%;
   height: auto;
-  padding: 1.5rem;
+  margin: 1.5rem;
+}
+
+@media only screen and (max-width: 480px) {
+  .banner {
+    flex-flow: column;
+  }
+
+  .banner img {
+    max-width: 100%;
+    margin: 0;
+  }
 }
 
 /* article */
 
-article {
+.banner article {
   max-width: 40%;
   margin-right: 1.5rem;
 }
 
-article h1 {
+.banner article h1 {
   font-size: 2rem;
   line-height: 1.2;
 }
 
-article p {
+.banner article p {
   line-height: 1.4;
-  padding: 1rem 0;
+  margin: 1rem 0;
 }
 
 .button {
@@ -137,7 +181,7 @@ article p {
   background-color: rgba(50, 50, 50, 0.8);
 }
 
-article a {
+.banner article a {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.8);
 }
@@ -152,20 +196,44 @@ article a {
   box-shadow: inset 0 0 1rem 0.2rem rgba(0, 0, 0, 0.2);
 }
 
+@media only screen and (max-width: 480px) {
+  .banner article {
+    max-width: 100%;
+    margin: 2rem 1rem;
+  }
+
+  .banner article h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+  }
+
+  .banner article p {
+    font-size: 2rem;
+    line-height: 1.4;
+    margin: 2rem 0 1.5rem;
+  }
+
+  .button {
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    background-color: rgba(50, 50, 50, 0.45);
+  }
+}
+
 /* INFO */
 
 .info {
   display: flex;
 }
 
-.info article {
+.info .desktop {
   display: flex;
   flex-direction: column;
   max-width: 60%;
   padding: 2rem 1.5rem;
 }
 
-.info article img {
+.info .desktop img {
   overflow: hidden;
   max-width: 100%;
   height: auto;
@@ -178,6 +246,7 @@ article a {
 
 .quote {
   font-size: 0.85rem;
+  margin: 2rem 0;
 }
 
 /* links */
@@ -193,6 +262,7 @@ article a {
 .link {
   display: flex;
   align-items: center;
+  transition: all 0.1s ease-in-out;
   border-bottom: 1px solid rgba(50, 50, 50, 0.2);
 }
 
@@ -204,7 +274,7 @@ article a {
   max-width: 65%;
 }
 
-.link img {
+.link .desktop {
   max-width: 35%;
   height: auto;
   padding: 1rem;
@@ -222,6 +292,53 @@ article a {
 .link li a {
   text-decoration: none;
   color: rgb(0, 148, 255);
+}
+
+.link li a:hover {
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 480px) {
+  .info .desktop {
+    display: none;
+  }
+
+  .links {
+    max-width: 100%;
+    margin: 1rem;
+    padding-top: 0;
+    border: none;
+  }
+
+  .link {
+    align-items: flex-start;
+    flex-direction: column;
+    border: none;
+  }
+
+  .link .mobile {
+    width: 100%;
+    height: auto;
+  }
+
+  .link-info {
+    max-width: 100%;
+    margin: 1rem 1rem 4rem;
+  }
+
+  .link li {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    padding: 0.5rem 0;
+  }
+
+  .link li:first-child {
+    font-size: 1.8rem;
+  }
+
+  .link .special {
+    margin-bottom: 2rem;
+  }
 }
 
 /* COURSES */
@@ -251,7 +368,12 @@ article a {
   flex-direction: column;
   max-width: 27%;
   margin: 1rem;
+  transition: all 0.01s ease-in-out;
   background-color: rgb(255, 255, 255);
+}
+
+.course:hover {
+  opacity: 0.85;
 }
 
 .course img {
@@ -272,6 +394,35 @@ article a {
   font-size: 1.2rem;
 }
 
+@media only screen and (max-width: 480px) {
+  .courses {
+    align-items: flex-start;
+  }
+
+  .courses h1 {
+    font-size: 3rem;
+  }
+
+  .course p {
+    font-size: 1.7rem;
+    margin: 0.25rem 0;
+    padding: 1rem 1rem 1.5rem;
+    background-color: rgba(50, 50, 50, 0.1);
+  }
+
+  .grid {
+    flex-flow: column;
+    width: 90%;
+    margin: 1rem 1rem 2rem;
+  }
+
+  .course {
+    max-width: 100%;
+    margin: 0;
+    background-color: inherit;
+  }
+}
+
 /* EXHIBIT */
 
 .exhibit {
@@ -286,6 +437,13 @@ article a {
 
 .exh-content {
   display: flex;
+}
+
+@media only screen and (max-width: 480px) {
+  .exhibit h1 {
+    font-size: 3rem;
+    margin: 2rem auto 1rem;
+  }
 }
 
 /* video */
@@ -316,17 +474,23 @@ article a {
   padding-top: 1.5rem;
 }
 
+@media only screen and (max-width: 480px) {
+  .video {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
 /* FOOTER */
 
 footer {
   display: flex;
-  height: 5rem;
   border-top: 1px solid rgba(50, 50, 50, 0.1);
 }
 
 footer p {
   font-size: 0.75rem;
-  padding: 1rem 1.5rem;
+  padding: 1rem 1.5rem 4rem;
 }
 
 footer p:first-child {
@@ -336,4 +500,20 @@ footer p:first-child {
 footer a {
   text-decoration: none;
   color: inherit;
+}
+
+footer a:hover {
+  color: rgba(50, 50, 50, 1);
+  border-radius: 2rem;
+}
+
+footer a:active {
+  color: rgba(50, 50, 50, 0.4);
+}
+
+@media only screen and (max-width: 480px) {
+  footer p {
+    font-size: 1rem;
+    padding: 1rem;
+  }
 }
